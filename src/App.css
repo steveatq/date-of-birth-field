@@ -124,22 +124,25 @@ input[type=number]::-webkit-outer-spin-button {
   width: 4rem;
 }
 
+/* Have used absolute URL so can work locally as well, otherwise
+   have to use /date-of-birth-field/font/ which would break locally. */
+
 @font-face {
   font-family: 'Ciutadella';
-  src: url('/font/315CA1_3_0.eot?#iefix') format('embedded-opentype'),
-  url('/font/315CA1_3_0.woff2') format('woff2'),
-  url('/font/315CA1_3_0.woff') format('woff'),
-  url('/font/315CA1_3_0.ttf') format('truetype');
+  src: url('https://steveatq.github.io/date-of-birth-field/font/315CA1_3_0.eot?#iefix') format('embedded-opentype'),
+  url('https://steveatq.github.io/date-of-birth-field/font/315CA1_3_0.woff2') format('woff2'),
+  url('https://steveatq.github.io/date-of-birth-field/font/315CA1_3_0.woff') format('woff'),
+  url('https://steveatq.github.io/date-of-birth-field/font/315CA1_3_0.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ciutadella';
-  src: url('/font/315CA1_1_0.eot?#iefix') format('embedded-opentype'),
-  url('/font/315CA1_1_0.woff2') format('woff2'),
-  url('/font/315CA1_1_0.woff') format('woff'),
-  url('/font/315CA1_1_0.ttf') format('truetype');
+  src: url('https://steveatq.github.io/date-of-birth-field/font/315CA1_1_0.eot?#iefix') format('embedded-opentype'),
+  url('https://steveatq.github.io/date-of-birth-field/font/315CA1_1_0.woff2') format('woff2'),
+  url('https://steveatq.github.io/date-of-birth-field/font/315CA1_1_0.woff') format('woff'),
+  url('https://steveatq.github.io/date-of-birth-field/font/315CA1_1_0.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
