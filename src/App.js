@@ -11,7 +11,8 @@ class App extends Component {
       dayValue: '',
       monthValue: '',
       yearValue: '',
-      isFocused: false
+      isFocused: false,
+      autoMoveFocus: window.location.search !== '?autoMoveFocus=false'
     };
   }
 
@@ -20,10 +21,12 @@ class App extends Component {
     if (value.length <= 2) {
       this.setState({ dayValue: value });
 
-      if (value.length === 2) {
-        console.log('Time to focus the month input!');
-        this.monthInput.focus();
-        this.monthInput.select();
+      if (this.state.autoMoveFocus) {
+        if (value.length === 2) {
+          console.log('Time to focus the month input!');
+          this.monthInput.focus();
+          this.monthInput.select();
+        }
       }
     }
   }
@@ -33,9 +36,11 @@ class App extends Component {
     if (value.length <= 2) {
       this.setState({ monthValue: value });
 
-      if (value.length === 2) {
-        this.yearInput.focus();
-        this.yearInput.select();
+      if (this.state.autoMoveFocus) {
+        if (value.length === 2) {
+          this.yearInput.focus();
+          this.yearInput.select();
+        }
       }
     }
   }
